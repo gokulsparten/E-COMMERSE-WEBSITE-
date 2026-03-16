@@ -1,0 +1,15 @@
+.men-container {
+  padding: 40px;
+}
+
+.section-title {
+ margin: 40px 0 20px;
+ font-size: 24px;
+}
+
+.men-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}

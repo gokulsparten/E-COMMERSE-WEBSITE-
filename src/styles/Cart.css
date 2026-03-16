@@ -1,0 +1,91 @@
+ .cart-container {
+  max-width: 800px;
+  margin: 80px auto;   /* This centers horizontally */
+  padding: 20px;
+}
+
+.cart-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+
+.cart-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cart-details p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.remove-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #333;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.checkout-btn:hover {
+  background: #333;
+}
+.empty-cart {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 40px;
+  color: gray;
+}
+.qty-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-section button {
+  padding: 4px 10px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.qty-section span {
+  font-weight: bold;
+}

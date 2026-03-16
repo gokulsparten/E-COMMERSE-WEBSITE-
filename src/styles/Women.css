@@ -1,0 +1,14 @@
+.women-container {
+  padding: 60px 40px;
+}
+
+.women-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.women-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
