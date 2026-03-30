@@ -1,7 +1,7 @@
 
-import checkedShirt from "../assets/images/Checked-shirt.png"
-import formalShirt from "../assets/images/Formal-shirt.png"
-import causalShirt from "../assets/images/Causal-shirt.png"
+import checkedShirt from "../assets/images/checked-shirt.png"
+import formalShirt from "../assets/images/formal-shirt.png"
+import causalShirt from "../assets/images/causal-shirt.png"
 import blueJean from "../assets/images/blue-jean.png"
 import blackJean from "../assets/images/black-jean.png"
 import baggyJean from "../assets/images/baggy-jean.png"
