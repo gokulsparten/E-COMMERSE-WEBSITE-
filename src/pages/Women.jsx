@@ -10,7 +10,7 @@ function Women({ setCartItems }) {
 
   const dresses = womenProducts.filter(p => p.type === "dress");
 const jeans = womenProducts.filter(p => p.type === "jeans");
-const tops = womenProducts.filter(p => p.type === "top");
+const sarees = womenProducts.filter(p => p.type === "Sarees");
 
 
  const addToCart = (product) => {
@@ -60,9 +60,9 @@ const tops = womenProducts.filter(p => p.type === "top");
     </div>
 
     {/* Tops */}
-    <h2>Tops</h2>
+    <h2>Sarees</h2>
     <div className="women-grid">
-      {tops.map(product => (
+      {sarees.map(product => (
         <ProductCard
           key={product.id}
           product={product}

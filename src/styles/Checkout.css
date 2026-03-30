@@ -85,4 +85,36 @@
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 10px;
+  max-width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .checkout-container {
+    margin: 70px auto 20px;
+    padding: 20px;
+  }
+  
+  .checkout-item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .checkout-total {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .checkout-title {
+    font-size: 24px;
+  }
+  
+  .address-section input {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

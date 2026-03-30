@@ -37,3 +37,40 @@ cursor:pointer;
 color:#0f8f78;
 cursor:pointer;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .auth-container {
+    gap: 40px;
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  
+  .login-box,
+  .signup-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 30px 15px;
+  }
+  
+  .login-box,
+  .signup-box {
+    padding: 25px 15px;
+  }
+  
+  input {
+    padding: 12px;
+  }
+  
+  button {
+    padding: 14px;
+  }
+}

@@ -6,6 +6,8 @@ function UserMenu(){
 
   const isLoggedIn = localStorage.getItem("isLoggedIn");
 
+  
+
   const logout = () => {
     localStorage.removeItem("isLoggedIn");
     alert("Logged out");
@@ -24,9 +26,8 @@ function UserMenu(){
         </>
 
       ) : (
-
         <button onClick={logout}>Logout</button>
-
+        
       )}
 
     </div>

@@ -114,4 +114,123 @@ background:#eee;
 display:block;
 }
 
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+  
+  .nav-links {
+    margin-left: 40px;
+    gap: 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: black;
+    margin-left: 0;
+    padding: 20px;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .logo {
+    font-size: 22px;
+  }
+  
+  .nav-icons {
+    gap: 15px;
+  }
+  
+  .cart {
+    font-size: 18px;
+  }
+  
+  .user-icon {
+    font-size: 18px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 15px;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  .nav-icons {
+    gap: 12px;
+  }
+  
+  .cart {
+    font-size: 16px;
+  }
+  
+  .user-icon {
+    font-size: 16px;
+  }
+
+  .user-menu {
+    display: flex;
+    align-items: center;
+    gap:10px;
+  }
+
+
+  .logout-btn {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .logout-btn:hover {
+    background-color: #16a34a;
+  }
+}
 

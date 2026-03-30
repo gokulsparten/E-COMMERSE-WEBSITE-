@@ -24,7 +24,7 @@ function ProductCard({ product, addToCart }) {
       <button
   onClick={(e) => {
     e.stopPropagation();
-    addToCart(product);
+    addToCart({...product, quantity:1});
     setAdded(true);
     setTimeout(() => setAdded(false), 1000);
   }}

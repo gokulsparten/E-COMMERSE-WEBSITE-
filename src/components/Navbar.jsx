@@ -1,14 +1,14 @@
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useState,useEffect } from "react"
 
 function Navbar( { cartCount }) {
   const navigate = useNavigate();
-   
-const [isLoggedIn,setIsLoggedIn] = useState(false)
+  const [isLoggedIn,setIsLoggedIn] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 useEffect(()=>{
 
@@ -22,30 +22,38 @@ setIsLoggedIn(true)
   return (
     <nav className="navbar">
       <div className="logo">H&M</div>
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
+      
+      <div 
+        className="menu-toggle" 
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
+        {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+      
+      <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
+        <li><Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
          <li>
-    <NavLink to="/men" className={({isActive}) => isActive ? "active" : ""}>
+    <NavLink to="/men" className={({isActive}) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>
       Men
     </NavLink>
    </li>
 
    <li>
-    <NavLink to="/women" className={({isActive}) => isActive ? "active" : ""}>
+    <NavLink to="/women" className={({isActive}) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>
       Women
     </NavLink>
    </li>
 
    <li>
-    <NavLink to="/sale" className={({isActive}) => isActive ? "active" : ""}>
+    <NavLink to="/sale" className={({isActive}) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>
       Sale
     </NavLink>
    </li>
- </ul>
-        <div className="nav-icons">
-          {isLoggedIn ? (
+  </ul>
+         <div className="nav-icons">
+           {isLoggedIn ? (
 
- <div className="user-menu">
+  <div className="user-menu">
 <span>👤 Gokul</span>
 
 <button

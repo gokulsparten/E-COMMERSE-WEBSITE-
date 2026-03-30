@@ -28,7 +28,10 @@ const handlePayment = () => {
     alert("Please fill all address fields");
     return;
   }
-
+  if (paymentMethod === "upi") {
+    window.location.href = upiLink;
+    return;
+  }
   // Generate Fake Transaction ID
   const transactionId = "TXN" + Math.floor(Math.random() * 1000000000);
 
@@ -52,7 +55,7 @@ const handlePayment = () => {
   //const total = 1;
 
   const upiID = "gokulsparten4701@oksbi";
-  const upiLink = `upi://pay?pa=${upiID}&pn=Gokul k&am=${total}&cu=INR`;
+  const upiLink = `upi://pay?pa=${upiID}&pn=Gokul&am=${total}&cu=INR`;
 
 
   return (
@@ -151,7 +154,7 @@ const handlePayment = () => {
   <div className="qr-section">
     <h4>Scan & Pay</h4>
    <img
-  src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${upiLink}`}
+  src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiLink)}`}
   alt="QR Code"
 />
     <p>UPI ID: {upiID}</p>

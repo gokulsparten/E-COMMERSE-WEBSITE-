@@ -43,7 +43,7 @@ function Home( { setCartItems }) {
            product={{
            id: 3,
            image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b",
-           title: "Casual Shirt",
+           title: "Casual TShirt",
            price: 1499
            }}
            addToCart={(product) =>
@@ -85,7 +85,7 @@ addToCart={(product) =>
 product={{
   id: 6,
   image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
-  title: "Denim Jeans",
+  title: "Denim Jean",
   price: 1999
 }}
 addToCart={(product) =>
